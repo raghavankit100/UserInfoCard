@@ -1,16 +1,16 @@
 const storedUserInfo = localStorage.getItem("userInformation");
-// if (storedUserInfo) {
-//     const userInfo = JSON.parse(storedUserInfo);
-//     document.getElementById("first-name").textContent = userInfo.firstName;
-//     document.getElementById("last-name").textContent = userInfo.lastName;
-//     document.getElementById("country").textContent = userInfo.country;
-//     document.getElementById("phone-number").textContent = userInfo.phoneNumber;
-//     document.getElementById("state").textContent = userInfo.state;
-//     document.getElementById("city").textContent = userInfo.city;
-//     document.getElementById("village").textContent = userInfo.village;
-// } else {
-//     storeUserInfo();
-// }
+if (storedUserInfo) {
+    const userInfo = JSON.parse(storedUserInfo);
+    document.getElementById("first-name").textContent = userInfo.firstName;
+    document.getElementById("last-name").textContent = userInfo.lastName;
+    document.getElementById("country").textContent = userInfo.country;
+    document.getElementById("phone-number").textContent = userInfo.phoneNumber;
+    document.getElementById("state").textContent = userInfo.state;
+    document.getElementById("city").textContent = userInfo.city;
+    document.getElementById("village").textContent = userInfo.village;
+} else {
+    storeUserInfo();
+}
 
 function storeUserInfo() {
     const firstName = prompt("Enter your first name:");
@@ -42,4 +42,3 @@ function storeUserInfo() {
     document.getElementById("village").textContent = userInfo.village;
 }
 
-storeUserInfo();
